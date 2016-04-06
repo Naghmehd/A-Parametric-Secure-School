@@ -1,0 +1,13 @@
+<h1> Students of this teacher </h1>
+
+  <ol>
+  <% @students.each do |student| %>
+    <li>
+      <p><%= student.name %></p>
+      <p><%= student.age %></p>
+
+      <%= link_to "Student's courses", school_teacher_students_path(@teacher, student) %>
+
+    </li>
+    <%end%>
+  </ol>

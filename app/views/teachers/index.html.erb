@@ -1,0 +1,15 @@
+<h1>All The Teachers </h!>
+
+  <h3>Teachers </h3>
+
+  <ol>
+  <% @teachers.each do |teacher| %>
+    <li>
+      <p><%= teacher.name %></p>
+      <p><%= teacher.age %></p>
+      <p><%= teacher.hiredate %></p>
+      <%= link_to "Teacher's Students", school_teacher_path(@school, teacher) %>
+
+    </li>
+    <%end%>
+  </ol>

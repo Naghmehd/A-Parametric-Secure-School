@@ -1,0 +1,13 @@
+<div>
+  <h1> <%= @school.name %> </h1>
+    <p><%= @school.location %></p>
+    <p><%= @school.motto %></p>
+</div>
+
+<div>
+  <p>Number Students: <%= @school.students.count%></p>
+
+  <p>Number of Teachers: <%= @school.teachers.count%></p>
+  <%= link_to "teachers", school_teachers_path(@school) %>
+  <p>Number of Courses: <%= @school.courses.count %></p>
+</div>
