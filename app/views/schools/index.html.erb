@@ -1,15 +1,17 @@
-<h1>Welcome to the District</h!>
-
-  <h3>School</h3>
-
-  <ol>
-  <% @schools.each do |school| %>
-    <li>
-      <p><%= school.name %></p>
-      <p><%= school.location %></p>
-      <p><%= school.motto %></p>
-      <%= link_to "School", school_path(school) %>
-
-    </li>
-    <%end%>
-  </ol>
+<div class="container">
+  <h1 class="school-title">Schools</h3>
+  <div class="row">
+    <div class="col-md-8 teachers-box">
+      <ol class="school-box">
+      <% @schools.each do |school| %>
+        <li >
+          <p><%= school.name %></p>
+          <p><%= school.location %></p>
+          <p><%= school.motto %></p>
+          <%= link_to "School", school_path(school) %>
+        </li>
+        <%end%>
+      </ol>
+    </div>
+  </div>
+</div

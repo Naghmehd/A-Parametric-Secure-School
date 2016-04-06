@@ -1,13 +1,17 @@
-<h1> Students of this teacher </h1>
+<div class="container">
+    <h1 class="student-title"> Students of this teacher </h1>
+    <div class="row">
+      <div class="col-md-8 student-box">
+      <ol>
+      <% @students.each do |student| %>
+        <li class="student-each">
+          <p><%= student.name %></p>
+          <p><%= student.age %></p>
+          <p><%= link_to "Student's courses", school_teacher_students_path(@teacher, student) %><p>
 
-  <ol>
-  <% @students.each do |student| %>
-    <li>
-      <p><%= student.name %></p>
-      <p><%= student.age %></p>
-
-      <%= link_to "Student's courses", school_teacher_students_path(@teacher, student) %>
-
-    </li>
-    <%end%>
-  </ol>
+        </li>
+        <%end%>
+      </ol>
+    </div>
+  </div>
+</div>

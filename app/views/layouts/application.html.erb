@@ -9,15 +9,17 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
       <nav>
         <ul class="nav navbar-nav navbar-right">
-          <li class="home"><%= link_to "Home", school_path(@schools) %></li>
+          <li class="home"><%= link_to "Home", schools_path %></li>
         </ul>
       </nav>
 </header>
-    <div class="container">
-    </div>
-<body>
 
-<%= yield %>
+<body>
+  <div class="container">
+
+      <%= yield %>
+
+  </div>
 
 </body>
 </html>

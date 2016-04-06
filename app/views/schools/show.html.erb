@@ -1,14 +1,19 @@
-<div>
-  <h1> <%= @school.name %> </h1>
-    <p><%= @school.location %></p>
-    <p><%= @school.motto %></p>
-</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 school-name">
+        <h1 class="school-title"><%=@school.name %></h1>
 
-<div>
-  <p>Number Students: <%= @school.students.count%></p>
+          <p><%= @school.location %></p>
+          <p><%= @school.motto %></p>
+    </div>
+  </div>
+      <div class="row">
+        <div class="col-md-8 school-data">
+          <p>Number Students: <%= @school.students.count%></p>
 
-  <p>Number of Teachers: <%= @school.teachers.count%></p>
-  <%= link_to "Teachers", school_teachers_path(@school) %>
-  <p>Number of Courses: <%= @school.courses.count %></p>
-
+          <p>Number of Teachers: <%= @school.teachers.count%></p>
+          <%= link_to "Teachers", school_teachers_path(@school) %>
+          <p>Number of Courses: <%= @school.courses.count %></p>
+        </div>
+      </div>
 </div>

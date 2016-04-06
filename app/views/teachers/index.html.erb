@@ -1,15 +1,18 @@
-<h1>All The Teachers </h!>
+<div class="container">
+  <h1 class="teacher-title">All The Teachers </h1>
+  <div class="row">
+    <div class="col-md-8">
+      <ol class="teachers-box">
+      <% @teachers.each do |teacher| %>
+        <li>
+          <p><%= teacher.name %></p>
+          <p><%= teacher.age %></p>
+          <p><%= teacher.hiredate %></p>
+          <%= link_to "Teacher's Students", school_teacher_path(@school, teacher) %>
 
-  <h3>Teachers </h3>
-
-  <ol>
-  <% @teachers.each do |teacher| %>
-    <li>
-      <p><%= teacher.name %></p>
-      <p><%= teacher.age %></p>
-      <p><%= teacher.hiredate %></p>
-      <%= link_to "Teacher's Students", school_teacher_path(@school, teacher) %>
-
-    </li>
-    <%end%>
-  </ol>
+        </li>
+        <%end%>
+      </ol>
+    </div>
+  </div>
+</div>
