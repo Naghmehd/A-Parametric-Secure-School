@@ -6,6 +6,15 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<header class="navbar navbar-fixed-top navbar-inverse">
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="home"><%= link_to "Home", school_path(@schools) %></li>
+        </ul>
+      </nav>
+</header>
+    <div class="container">
+    </div>
 <body>
 
 <%= yield %>
