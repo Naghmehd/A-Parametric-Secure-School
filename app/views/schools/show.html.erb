@@ -10,10 +10,12 @@
       <div class="row">
         <div class="col-md-8 school-data">
           <p>Number Students: <%= @school.students.count%></p>
+          <%= link_to "Students", school_students_path(@school), class: 'btn btn-default' %>
 
           <p>Number of Teachers: <%= @school.teachers.count%></p>
-          <%= link_to "Teachers", school_teachers_path(@school) %>
+          <%= link_to "Teachers", school_teachers_path(@school), class: 'btn btn-default' %>
           <p>Number of Courses: <%= @school.courses.count %></p>
+          <%= link_to "Courses", school_courses_path(@school), class: 'btn btn-default' %>
         </div>
       </div>
 </div>

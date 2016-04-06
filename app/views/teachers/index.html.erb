@@ -8,7 +8,7 @@
           <p><%= teacher.name %></p>
           <p>Age: <%= teacher.age %></p>
           <p>With school since: <%= teacher.hiredate %></p>
-          <p><%= link_to "Teacher's Students", school_teacher_path(@school, teacher) %></p>
+          <p><%= link_to "Teacher's Students", school_teacher_path(@school, teacher), class: 'btn btn-default' %></p>
 
         </li>
         <%end%>
