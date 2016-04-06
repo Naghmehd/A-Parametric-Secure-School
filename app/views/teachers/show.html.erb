@@ -6,7 +6,7 @@
       <% @students.each do |student| %>
         <li class="student-each">
           <p><%= student.name %></p>
-          <p><%= student.age %></p>
+          <p>Age: <%= student.age %></p>
           <p><%= link_to "Student's courses", school_teacher_students_path(@teacher, student) %><p>
 
         </li>

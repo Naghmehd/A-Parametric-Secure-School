@@ -6,9 +6,9 @@
       <% @teachers.each do |teacher| %>
         <li>
           <p><%= teacher.name %></p>
-          <p><%= teacher.age %></p>
-          <p><%= teacher.hiredate %></p>
-          <%= link_to "Teacher's Students", school_teacher_path(@school, teacher) %>
+          <p>Age: <%= teacher.age %></p>
+          <p>With school since: <%= teacher.hiredate %></p>
+          <p><%= link_to "Teacher's Students", school_teacher_path(@school, teacher) %></p>
 
         </li>
         <%end%>
