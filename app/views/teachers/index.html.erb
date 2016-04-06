@@ -1,14 +1,14 @@
 <div class="container">
-  <h1 class="teacher-title">All The Teachers </h1>
+  <h1 class="course-title">All The Courses </h1>
   <div class="row">
     <div class="col-md-8">
-      <ol class="teachers-box">
+      <ol class="courses-box">
       <% @teachers.each do |teacher| %>
         <li>
           <p><%= teacher.name %></p>
           <p>Age: <%= teacher.age %></p>
           <p>With school since: <%= teacher.hiredate %></p>
-          <p><%= link_to "Teacher's Students", school_teacher_path(@school, teacher), class: 'btn btn-default' %></p>
+          <p><%= link_to "Teacher's Students", school_students_path(@school, teacher), class: 'btn btn-default' %></p>
 
         </li>
         <%end%>

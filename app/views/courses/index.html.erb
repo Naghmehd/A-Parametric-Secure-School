@@ -1,0 +1,18 @@
+<div class="container">
+  <h1 class="course-title"> All the courses </h1>
+
+    <div class="row">
+      <div class="col-md-8 courses-box">
+        <ol>
+          <% @courses.each do |course| %>
+            <li>
+              <p>Course Name: <%= course.name %></p>
+              <p>Course Duration: <%= course.duration%></p>
+              <p><%= link_to "School", school_path(@school), class: 'btn btn-default' %></p>
+
+            </li>
+            <%end%>
+        </ol>
+      </div>
+    </div>
+</div>

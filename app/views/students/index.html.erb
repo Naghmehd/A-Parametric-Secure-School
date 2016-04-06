@@ -1,17 +1,17 @@
 <div class="container">
-  <h1> All the courses </h1>
-
+  <h1 class="student-title">All the students </h1>
   <div class="row">
-    <div class="col-md-8 students-box">
-      <ol>
-        <% @courses.each do |course| %>
+    <div class="col-md-8">
+      <ol class="teachers-box">
+          <% @students.each do |student| %>
           <li>
-            <p><%= course.name %></p>
-            <p><%= course.duration%></p>
-            <%= link_to "School", school_path(school) %>
+            <p>Name: <%= student.name %></p>
+            <p>Age: <%= student.age %></p>
 
+            <%= link_to "Courses", school_courses_path(@school), class: 'btn btn-default' %>
           </li>
-          <%end%>
-      </ol>
+            <% end %>
+          </ol>
+        </div>
     </div>
-  </div>
+</div>
